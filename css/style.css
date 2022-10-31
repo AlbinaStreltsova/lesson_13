@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body{
+	font-family:"Lato", serif;
+	overflow: hidden;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+[class*="__container"] {
+
+	min-height: 100%;
+}
+.ni-sky-anm{
+	background: url(../img/sky.jpg) 0 0 / contain no-repeat;
+	height: 100vw;
+	position: relative;
+}
+
+.ni-sky-anm__moon{
+	width: 13%;
+	height: 13%;
+	background: url(../img/moon.png) 0 0 / cover no-repeat;
+	position: relative;
+	top: 7%;
+	left: 80%;
+	opacity: 0;
+	animation-name: appearance-moon;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+@keyframes appearance-moon{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0.7;
+	}
+}
+.ni-sky-anm__star{
+	width: 0.15%;
+	height: 0.15%;
+	border-radius: 50%;
+	background-color: rgb(252, 252, 238);
+	position: absolute;
+	top: 35%;
+	left: 40%;
+
+	animation-name: shine-star;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+}
+@keyframes shine-star{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0.1;
+	}
+}
+.ni-sky-anm__star--one{
+	top: 35%;
+	left: 85%;
+	animation-duration: 3.4s;
+}
+.ni-sky-anm__star--two{
+	top: 30%;
+	left: 60%;
+	animation-delay: 1.3s;
+}
+.ni-sky-anm__star--three{
+	top: 15%;
+	left: 20%;
+	animation-duration: 2.2s;
+}
+.ni-sky-anm__star--four{
+	top: 50%;
+	left: 30%;
+	animation-duration: 3s;
+}
+.ni-sky-anm__star--five{
+	top: 25%;
+	left: 10%;
+	animation-delay: 2.5s;
+}
+.ni-sky-anm__star--six{
+	top: 50%;
+	left: 60%;
+	animation-delay: 3.2s;
+}
+
+.ni-sky-anm__fall-star{
+	width: 0.5%;
+	height: 0.2%;
+	background-color: rgb(253, 251, 227);
+	transform: rotate(45deg);
+	opacity: 0;
+	border-radius: 50%;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	position: absolute;
+}
+.ni-sky-anm__fall--one{
+	top: 0;
+	left: 50%;
+	
+	animation-name: falling;
+	animation-duration: 2s;
+	animation-delay: 5s;
+
+}
+@keyframes falling{
+	0%{
+		opacity: 0.2;
+		transform: rotate(-45deg);
+	}
+	50%{
+		transform: translate(-30vw, 30vw) rotate(-45deg);
+		opacity: 0.4;
+	}
+	75%{
+		opacity: 1;
+		transform: translate(-60vw, 60vw) rotate(-45deg) scale(3, 1.4);
+		background-color: rgb(36, 114, 218);
+	}
+	100%{
+		opacity: 0;
+		transform: translate(-90vw, 90vw) rotate(-45deg);
+	}
+
+}
+.ni-sky-anm__fall--two{
+	top: 0;
+	left: 0;
+	
+	animation-name: flight;
+	animation-duration: 2.5s;
+	animation-delay: 5.5s;
+
+}
+@keyframes flight{
+	0%{
+		opacity: 0.2;
+		transform: rotate(45deg);
+	}
+	50%{
+		transform: translate(20vw, 20vw) rotate(45deg);
+		opacity: 0.4;
+	}
+	75%{
+		opacity: 1;
+		transform: translate(30vw, 30vw) rotate(45deg) scale(3 ,1.4);
+		background-color: rgb(44, 135, 255);
+	}
+	100%{
+		opacity: 0;
+		transform: translate(40vw, 40vw) rotate(45deg);
+	}
+}
+.ni-sky-anm__fall-star--three{
+	top: 20%;
+	right: 0;
+	
+	animation-name: incidence;
+	animation-duration: 2.5s;
+	animation-delay: 7s;
+
+}
+@keyframes incidence{
+	0%{
+		opacity: 0.2;
+		transform: rotate(-45deg);
+	}
+	50%{
+		transform: translate(-20vw, 20vw) rotate(-45deg);
+		opacity: 0.4;
+	}
+	75%{
+		opacity: 1;
+		transform: translate(-30vw, 30vw) rotate(-45deg) scale(3, 1.4);
+		background-color: rgb(36, 114, 218);
+	}
+	100%{
+		opacity: 0;
+		transform: translate(-40vw, 40vw) rotate(-45deg);
+	}
+
+}
+.ni-sky-anm__fall-star--four{
+	top: 10%;
+	right: 30%;
+	
+	animation-name: drop;
+	animation-duration: 2s;
+	animation-delay: 9s;
+}
+@keyframes drop{
+	0%{
+		opacity: 0.2;
+		transform: rotate(45deg);
+	}
+	50%{
+		transform: translate(10vw, 10vw) rotate(45deg);
+		opacity: 0.4;
+	}
+	75%{
+		opacity: 1;
+		transform: translate(20vw, 20vw) rotate(45deg) scale(3, 1.4);
+		background-color: rgb(101, 60, 247);
+	}
+	100%{
+		opacity: 0;
+		transform: translate(30vw, 30vw) rotate(45deg);
+	}
+
+}
+.ni-sky-anm__info{
+	opacity: 0.1; 
+	transition: all 1s ease 3s; 
+	position: absolute;
+	top: 5%;
+	left:15%;
+	
+}
+.ni-sky-anm__info:hover{
+	opacity: 0.8;
+}
+.ni-sky-anm__info span{
+	font-size: 26px;
+	font-weight: 700;
+	color: whitesmoke;
+	vertical-align: middle;
+}
+
+.ni-sky-anm__info img{
+	display: inline-block;
+	vertical-align: middle;
+
+	animation-name: rotate-img;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes rotate-img{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
